@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscina Relax</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header.hero-image {
+            background-image: url('piscinamare.jpg');
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-inner img {
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        #evenimente-special {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('piscinamare.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+        }
+
+        #meniul {
+            padding: 50px 20px;
+            border-radius: 15px;
+        }
+
+        .menu-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu-image {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .menu-content {
+            max-width: 400px;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            header.hero-image {
+                height: 30vh;
+            }
+            iframe {
+                width: 100%;
+                height: 300px;
+            }
+            .carousel-inner img {
+                max-height: 200px;
+            }
+            .menu-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .menu-content {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header.hero-image {
+                height: 25vh;
+            }
+            h1.display-3 {
+                font-size: 1.5rem;
+            }
+            .carousel-inner img {
+                max-height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Piscina Relax</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#evenimente">Evenimente</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#meniul">Meniu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tarife">Tarife</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-image text-center text-white">
+        <h1 class="display-3">Piscina Relax</h1>
+    </header>
+
+    <!--<section id="evenimente-special" class="container my-5">
+        <h2 class="display-4">Marea Deschidere</h2>
+        <p class="lead">Nu ratați marea deschidere a piscinei noastre în luna <strong>iunie</strong>! Vă așteptăm cu surprize și distracție pentru toată familia.</p>
+    </section>
+-->
+    <section id="evenimente" class="container my-5">
+        <h2 class="text-center">Galerie Foto</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="piscina.jpg" class="d-block w-100" alt="Piscina 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="OIP (1).jpg" class="d-block w-100" alt="Piscina 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="OIP (2).jpg" class="d-block w-100" alt="Piscina 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="OIP.jpg" class="d-block w-100" alt="Piscina 4">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="meniul" class="container my-5">
+        <div class="menu-container">
+            <img src="food1.jpg" alt="Mâncare delicioasă" class="menu-image">
+            <div class="menu-content">
+                <h2>Restaurantul Piscinei</h2>
+                <p>Bucură-te de preparate delicioase și băuturi răcoritoare chiar lângă piscină.</p>
+                <button class="btn btn-light" onclick="window.location.href='meniul.html'">Vezi Meniul</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarife" class="container text-center my-5">
+        <h2>Tarife de Intrare</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Copii: 20 RON</li>
+            <li class="list-group-item">Studenți: 30 RON</li>
+            <li class="list-group-item">Adulți: 40 RON</li>
+        </ul>
+    </section>
+
+    <section class="container text-center my-5">
+        <h2>Unde ne găsești?</h2>
+        <p>Strada Relaxării, Nr. 123, București</p>
+        <iframe src="https://www.google.com/maps/embed?" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <h3>Orar Piscină</h3>
+        <p>Luni - Duminică: 08:00 - 22:00</p>
+    </section>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2025 Piscina Relax. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+  z\
