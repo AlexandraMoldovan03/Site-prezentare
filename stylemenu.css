@@ -1,0 +1,88 @@
+/* Paleta de culori */
+:root {
+    --light-blue: #CEECE3;
+    --mid-blue: #9AD4CC;
+    --teal: #279DA4;
+    --dark-teal: #05808C;
+    --white: #ffffff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+/* Resetări generale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-blue);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Stilizare antet */
+header {
+    background-color: var(--dark-teal);
+    color: var(--white);
+    padding: 20px;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Stilizare secțiuni */
+.menu-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--mid-blue);
+    border-radius: 10px;
+    width: 80%;
+}
+
+.menu-section h2 {
+    color: var(--dark-teal);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Grid pentru elementele din meniu */
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: var(--teal);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    color: var(--white);
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    color: var(--light-blue);
+    font-size: 14px;
+}
+
+.price {
+    display: block;
+    background-color: var(--dark-teal);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}

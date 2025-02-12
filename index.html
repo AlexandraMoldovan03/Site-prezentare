@@ -6,7 +6,24 @@
     <title>Piscina Relax</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="water.js"></script>
     <style>
+
+
+
+        body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #CEECE3;
+        }
+
+
+
+
+
+
+
         header.hero-image {
             background-image: url('piscinamare.jpg');
             height: 50vh;
@@ -15,11 +32,71 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Adaugă o umbră sub imagine */
         }
 
+
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 10;
+        }
+
+        .wave-container svg {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            transform: rotate(180deg);
+        }
+
+        .wave-container .shape-fill {
+            fill: #EDD5C0;
+        }
+
+
+
+
+        .section-evenimente {
+            background: #9AD4CC;
+            padding: 50px 20px;
+            border-radius: 15px;
+        }
+
+        .section-meniu {
+            background: #9AD4CC;
+            padding: 50px 20px;
+        }
+
+        .section-tarife {
+            background: #9AD4CC;
+            padding: 50px 20px;
+            border-radius: 15px;
+        }
+
+        .section-locatie {
+            padding: 50px 20px;
+        }
+
+
+
+        .navbar {
+    background-color: #05808C !important; /* Un turcoaz din paleta ta */
+}
+
+
         .carousel-inner img {
-            max-height: 300px;
-            object-fit: cover;
+            max-height: 250px; /* Dimensiune mai mică */
+        width: auto; 
+        object-fit: contain; /* Asigură că întreaga imagine este vizibilă */
+        margin: 0 auto; /* Centrare */
         }
 
         #evenimente-special {
@@ -98,7 +175,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#evenimente">Evenimente</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#meniul">Meniu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Meniu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#tarife">Tarife</a></li>
                 </ul>
             </div>
@@ -107,6 +184,11 @@
 
     <header class="hero-image text-center text-white">
         <h1 class="display-3">Piscina Relax</h1>
+        <!-- <div class="wave-container">
+            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path class="shape-fill" d="M0,160L48,186.7C96,213,192,267,288,245.3C384,224,480,128,576,101.3C672,75,768,117,864,122.7C960,128,1056,96,1152,80C1248,64,1344,64,1392,64L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div> -->
     </header>
 
     <!--<section id="evenimente-special" class="container my-5">
@@ -114,7 +196,7 @@
         <p class="lead">Nu ratați marea deschidere a piscinei noastre în luna <strong>iunie</strong>! Vă așteptăm cu surprize și distracție pentru toată familia.</p>
     </section>
 -->
-    <section id="evenimente" class="container my-5">
+    <section id="evenimente" class="container section-evenimente my-5">
         <h2 class="text-center">Galerie Foto</h2>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -142,7 +224,7 @@
         </div>
     </section>
 
-    <section id="meniul" class="container my-5">
+    <section id="meniul" class="container  section-meniu my-5">
         <div class="menu-container">
             <img src="food1.jpg" alt="Mâncare delicioasă" class="menu-image">
             <div class="menu-content">
@@ -153,7 +235,7 @@
         </div>
     </section>
 
-    <section id="tarife" class="container text-center my-5">
+    <section id="tarife" class="container section-tarife text-center my-5">
         <h2>Tarife de Intrare</h2>
         <ul class="list-group">
             <li class="list-group-item">Copii: 20 RON</li>
@@ -162,7 +244,7 @@
         </ul>
     </section>
 
-    <section class="container text-center my-5">
+    <section class="container section-locatie text-center my-5">
         <h2>Unde ne găsești?</h2>
         <p>Strada Relaxării, Nr. 123, București</p>
         <iframe src="https://www.google.com/maps/embed?" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -174,7 +256,8 @@
         <p>&copy; 2025 Piscina Relax. Toate drepturile rezervate.</p>
     </footer>
 
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-  z\
